@@ -1,0 +1,300 @@
+html{
+    overflow-y: hidden;
+}
+
+body{
+    min-height: 100vh;
+    padding: 0;
+    height: fit-content;
+    background: rgb(2,0,36);
+    background: darkslategrey;
+    background-repeat: no-repeat;
+}
+
+header{
+    position: fixed;
+    top: 0;
+}
+header img{
+    width: 20vh;
+    height: 20vh;
+}
+
+.botones{
+    margin-top: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.botones button{
+    margin: 0 20px 0 20px;
+    font-size: 30px;
+    border: solid black 5px;
+    border-radius: 10px;
+    padding: 20px;
+    cursor: pointer;
+    transition: .5s all;
+    color: rgb(255, 255, 255);    
+}
+
+.botones button:hover{
+    transform: scale(1.5);
+    margin-right: 80px;
+    margin-left: 100px;
+    box-shadow: 2px 2px 30px 5px;
+    color: gold;
+}
+
+.botones button:first-child{
+    background: rgb(33, 74, 161);
+}
+
+
+
+.botones button:last-child{
+    background: gray;
+}
+
+.agregar-palabra{
+    margin: 5% auto;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    max-width: 100vh;
+}
+
+.agregar-palabra textarea{
+    margin: 10px 20px 10px 20px;
+    background: transparent;
+    color: white;
+    font-size: 30px;
+    border: none;
+    width: 100vh;
+    height: 50vh;
+}
+
+.agregar-palabra button{
+    margin: 0 20px 0 20px;
+    font-size: 20px;
+    border: solid black 5px;
+    border-radius: 10px;
+    padding: 20px;
+    cursor: pointer;
+    color: white;
+    transition: .5s all;
+    background: rgb(33, 74, 161);
+}
+
+.agregar-palabra legend{
+    font-size: 20px;
+    color: white;
+    margin: 30px 30px 30px 30px;
+}
+
+.agregar-palabra legend:before{
+    content: "🛈";
+}
+
+.agregar-palabra button:hover{
+    box-shadow: 2px 2px 30px 5px;
+    color: gold;
+}
+
+.agregar-palabra button:first-child{
+    background: rgb(33, 74, 161);
+}
+
+.agregar-palabra button:last-child{
+    background: gray;
+}
+
+.juego-ahorcado{
+    width: 1200px;
+    height: 800px;
+    background: transparent;
+    display: none;
+    margin: 0 auto;
+    position: relative;
+}
+
+.dibujar{
+    position: relative;
+    left: 25%;
+    width: 50%;
+    height: 50%;
+    background: transparent;
+    margin: 0 auto;
+    color: white;
+}
+
+.juego-ahorcado p{
+    color: white;
+    font-size: 80px;
+    position: absolute;
+    left: 350px;
+    bottom: 250px;
+}
+
+.juego-ahorcado input{
+    background: transparent;
+    position: absolute;
+    bottom: 100px;
+    left: 25%;
+    right: 25%;
+    font-size: 30px;
+    height: 100px;
+    border: none;
+    color: white;
+}
+
+.juego-ahorcado input:focus{
+    outline: none;
+}
+
+.juego-ahorcado input::placeholder{
+    color: white;
+    opacity: 0.5;
+}
+
+.incorrect{
+    position: absolute;
+    bottom: 20px;
+    left: 25%;
+    color: red;
+    font-size:35px;
+}
+
+.lose-game{
+    display: none;
+    font-size:40px;
+    color:red;
+    position: absolute;
+    right: 200px;
+    top: 300px;
+}
+
+.win-game{
+    display: none;
+    font-size:40px;
+    color:green;
+    position: absolute;
+    right: 200px;
+    top: 300px;
+}
+
+.rendirse{
+    position: absolute;
+    bottom: 12%;
+    left: 10%;
+    background: red;
+    font-size: 30px;
+    border: solid black 5px;
+    border-radius: 10px;
+    padding: 20px;
+    cursor: pointer;
+    transition: 1s all;
+    color: white;    
+}
+
+.rendirse:hover{
+    box-shadow: 2px 2px 30px 5px;
+}
+
+.reiniciar{
+    display: none;
+    position: fixed;
+    top: 40%;
+    left: 55%;
+    margin: 0 20px 0 20px;
+    font-size: 20px;
+    border: solid black 5px;
+    border-radius: 10px;
+    padding: 20px;
+    cursor: pointer;
+    color: white;
+    transition: .5s all;
+    background: rgb(33, 74, 161);
+}
+
+.reiniciar:hover{
+    box-shadow: 2px 2px 30px 5px;
+    color: gold;
+}
+
+footer {
+    font-size: 20px;
+    position: absolute;
+    bottom: 0;
+    width: 50%;
+    height: 40px;
+    color: white;
+    margin-left: 10px;
+  }
+
+footer h2::before{
+    content: "©";
+}
+
+@media screen and (max-width: 480px){
+    
+    body{
+        min-height: 70vh;
+    }
+
+    header img{
+        width: 5vh;
+        height: 5vh;
+    }
+    .botones{
+        margin-top: 100%;
+        display: block;
+        text-align: center;
+    }
+    .botones button{
+        margin: 0 10px 10px 10px;
+        font-size: 30px;
+    }
+    .agregar-palabra{
+        margin-top: 40%;
+    }
+    .agregar-palabra textarea{
+        
+        width: 40vh;
+        height: 20vh;
+    }
+    .agregar-palabra button{
+        margin-top: 10px;
+    }
+    .juego-ahorcado{
+        width: 40vh;
+        height: 80vh;
+    }
+    .juego-ahorcado p{
+        font-size: 40px;
+        position: sticky;
+    }
+    .juego-ahorcado input{
+        bottom: 150px;
+        left: 0;
+        margin: 0;
+    }
+    .dibujar{
+        width: 400px;
+        height: 250px;
+    }
+    .incorrect{
+        bottom: 100px;
+        left: 0;
+        margin: 0;
+    }
+    .rendirse{
+        bottom: 0;
+    }
+    .reiniciar{
+        left: 0;
+    }
+    footer{
+        font-size: 20px;
+    }
+}

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="scripts.js"></script>
+    <title>Hangman</title>
+</head>
+<body>
+    <header>
+        <img src="aluraLogo.jpg" alt="" srcset="">
+    </header>
+    <main>
+        <section class="botones">
+            <button onclick="iniciarJuego()">Iniciar Juego</button>
+            <button onclick="agregarPalabra()">Agregar Palabra</button>
+        </section>
+
+        <section class="agregar-palabra">
+            <textarea class="palabra-agregada" placeholder="Ingrese su palabra aqui"></textarea>
+            <legend>Maximo 8 caracteres</legend>
+            <button onclick="guardarIniciar()">Guardar y comenzar el juego</button>
+            <button onclick="volverInicio()">Cancelar</button>
+        </section>
+
+        <section class="juego-ahorcado">
+            <canvas class="dibujar"></canvas>
+            <p class="palabra-oculta"></p>
+            <input maxlength="1" placeholder="ingrese su letra aqui" class="guess-area" onkeydown="return /[a-z]/i.test(event.key)">
+            <legend class="incorrect"></legend>
+            <legend class="lose-game">Fin del juego</legend>
+            <legend class="win-game">Ganaste, felicidades!</legend>
+            <button class="rendirse" onclick="reiniciar()">Rendirse</button>
+        </section>
+
+        <button class="reiniciar" onclick="reiniciar()">¿Jugar otra vez?</button>
+    </main>
+
+    <footer><h2> Luk431 - Lucas Turza</h2></footer>
+    
+</body>
+</html>
